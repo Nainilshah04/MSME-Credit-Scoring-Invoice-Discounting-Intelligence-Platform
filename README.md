@@ -5,7 +5,7 @@
 ### AI-Powered Alternative Credit Assessment for India's 6.3 Crore MSMEs
 
 [![Python](https://img.shields.io/badge/Python-3.14-blue?style=for-the-badge&logo=python)](https://python.org)
-[![Streamlit](https://img.shields.io/badge/Streamlit-App-red?style=for-the-badge&logo=streamlit)]https://msme-credit-scoring.streamlit.app/
+[![Streamlit](https://img.shields.io/badge/Streamlit-App-red?style=for-the-badge&logo=streamlit)]https://msme-credit-scoring-invoice-discounting-intelligence-platform.streamlit.app/
 [![Power BI](https://img.shields.io/badge/Power_BI-6_Pages-yellow?style=for-the-badge&logo=powerbi)](https://powerbi.microsoft.com)
 [![scikit-learn](https://img.shields.io/badge/scikit--learn-ML_Models-orange?style=for-the-badge&logo=scikit-learn)](https://scikit-learn.org)
 [![XGBoost](https://img.shields.io/badge/XGBoost-87%25_Accuracy-green?style=for-the-badge)](https://xgboost.readthedocs.io)
@@ -69,32 +69,25 @@ Assess whether an invoice will be paid on time and calculate risk level:
 
 ## 🏗️ Architecture
 
-graph TD
-    subgraph "MSME CREDIT PLATFORM"
-    A[Data Layer] --> B[ML Layer]
-    B --> C[Dashboard]
-    C --> D[Frontend]
-    
-    subgraph "Data Layer"
-    A1[SQLite DB: 63,807 Records]
-    A2[9 Tables / 3 Views]
-    A3[Synthetic + Kaggle Data]
-    end
-    
-    subgraph "ML Layer"
-    B1[XGBoost & Random Forest]
-    B2[Credit Scoring Model]
-    B3[Invoice Risk Model]
-    end
-    
-    subgraph "Dashboard & Frontend"
-    C1[Power BI: 6 Pages / DAX]
-    D1[Streamlit: 4 Pages]
-    D2[Credit Score Checker]
-    D3[Invoice Risk Analyzer]
-    end
-    end
-
+```text
+┌─────────────────────────────────────────────────────────────┐
+│                      MSME CREDIT PLATFORM                   │
+├─────────────┬─────────────┬─────────────┬───────────────────┤
+│ DATA LAYER  │   ML LAYER  │  DASHBOARD  │     FRONTEND      │
+│             │             │             │                   │
+│  SQLite DB  │   Credit    │  Power BI   │   Streamlit App   │
+│   63,807    │   Scoring   │   6 Pages   │      4 Pages      │
+│   Records   │    Model    │             │                   │
+│             │             │     DAX     │  • Credit Score   │
+│   9 Tables  │   Invoice   │  Measures   │    Checker        │
+│   3 Views   │    Risk     │             │  • Invoice Risk   │
+│  25 Queries │    Model    │   Drill-    │    Analyzer       │
+│             │             │  through    │  • Auto-calc      │
+│  Synthetic  │   XGBoost   │             │    Scores         │
+│  + Kaggle   │   Random    │   Slicers   │  • VAT/C-Form     │
+│    Data     │   Forest    │             │    History        │
+└─────────────┴─────────────┴─────────────┴───────────────────┘
+```
 
 ---
 
@@ -132,17 +125,17 @@ graph TD
 ### 📊 Power BI Dashboard (6 Pages)
 | Page | Theme | Purpose |
 |------|-------|---------|
-| Executive Summary | 🔵 Blue | CEO-level overview |
-| Credit Analytics | 🟢 Green | Risk team deep dive |
-| Invoice Marketplace | 🟠 Orange | Lender opportunities |
-| Lender Performance | 🟣 Purple | Portfolio tracking |
-| Advanced Analytics | 🔵 Teal | Correlation & anomalies |
-| MSME Detail | 🔵 Indigo | Drillthrough profiles |
+| Executive Summary | CEO-level overview |
+| Credit Analytics | Risk team deep dive |
+| Invoice Marketplace | Lender opportunities |
+| Lender Performance | Portfolio tracking |
+| Advanced Analytics | Correlation & anomalies |
+| MSME Detail | Drillthrough profiles |
 
 ### 🗄️ Database
 - **63,807 total records** across 9 tables
 - **25 production SQL queries** for analytics
-- **3 Power BI-optimized views**
+- **6 Power BI-optimized views**
 
 ---
 
@@ -240,7 +233,7 @@ This project is built considering the current MSME fintech landscape in India:
 
 **Nainil Shah** *3rd Year IT Student | D.J. Sanghvi College of Engineering*
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/nainil-shah-a440b728b/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)]https://www.linkedin.com/in/nainil-shah-a440b728b/
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)]https://github.com/Nainilshah04
 
 ---
