@@ -28,13 +28,14 @@ wheels/
 *.ipynb_checkpoints
 
 # Database
-*.db
 *.sqlite
 *.sqlite3
+# Allow our project database
+!data/msme_credit.db
 
-# Data files (we'll generate these)
-data/raw/*.csv
-data/processed/*.csv
+# Data files - allow raw data for deployment
+# data/raw/*.csv
+# data/processed/*.csv
 
 # IDE
 .vscode/

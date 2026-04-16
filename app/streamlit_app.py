@@ -149,10 +149,24 @@ def load_invoice_model():
         return None, None
 
 @st.cache_data
+# INTERVIEW NOTE: Dynamic path handling for both local and cloud deployment
+def get_db_path():
+    if os.path.exists('data/msme_credit.db'):
+        return 'data/msme_credit.db'
+    elif os.path.exists('../data/msme_credit.db'):
+        return '../data/msme_credit.db'
+    else:
+        return 'data/msme_credit.db'
+
+@st.cache_data
 def load_database_stats():
     """Load summary statistics from database"""
     try:
-        conn = sqlite3.connect('data/msme_credit.db')
+        conn = sqlite3.connect(get_db_path())
+        
+        total_msmes = pd.read_sql("SELECT COUNT(*) as count FROM msme_scoring", conn).iloc[0, 0]
+        avg_score = pd.read_sql("SELECT AVG(credit_score) as avg FROM msme_scoring", conn).iloc[0, 0]
+        total_invoices = pd.read_sql("SELECT COUNT(*) as count FROM invoices", conn).iloc[0, 0]
         
         total_msmes = pd.read_sql("SELECT COUNT(*) as count FROM msme_scoring", conn).iloc[0, 0]
         avg_score = pd.read_sql("SELECT AVG(credit_score) as avg FROM msme_scoring", conn).iloc[0, 0]
