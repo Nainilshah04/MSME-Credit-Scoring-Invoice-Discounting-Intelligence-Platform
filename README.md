@@ -5,7 +5,7 @@
 ### AI-Powered Alternative Credit Assessment for India's 6.3 Crore MSMEs
 
 [![Python](https://img.shields.io/badge/Python-3.14-blue?style=for-the-badge&logo=python)](https://python.org)
-[![Streamlit](https://img.shields.io/badge/Streamlit-App-red?style=for-the-badge&logo=streamlit)]https://msme-credit-scoring-invoice-discounting-intelligence-platform.streamlit.app/
+[![Streamlit](https://img.shields.io/badge/Streamlit-App-red?style=for-the-badge&logo=streamlit)]
 [![Power BI](https://img.shields.io/badge/Power_BI-6_Pages-yellow?style=for-the-badge&logo=powerbi)](https://powerbi.microsoft.com)
 [![scikit-learn](https://img.shields.io/badge/scikit--learn-ML_Models-orange?style=for-the-badge&logo=scikit-learn)](https://scikit-learn.org)
 [![XGBoost](https://img.shields.io/badge/XGBoost-87%25_Accuracy-green?style=for-the-badge)](https://xgboost.readthedocs.io)
